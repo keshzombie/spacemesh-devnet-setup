@@ -1,0 +1,21 @@
+sudo apt-get install screen wget unzip
+
+wget https://github.com/spacemeshos/go-spacemesh/releases/download/v0.2.0-rc7/linux.zip
+unzip linux.zip
+cd linux
+chmod u+x go-spacemesh
+chmod u+x lib*
+chmod u+x smrepl_linux_amd64
+
+"Node Setup:"
+screen -S spacenode
+./go-spacemesh -c config.json
+CTRL + A + D (node arkada çalışakoysun)
+
+"Client setup"
+./smrepl_linux_amd64
+account new (Burada alias ve pass vereceğiz.)
+account info (Keylerimizi ve adresimizi kopyalacayağız.)
+smesher set-rewards-address (Yukarıdaki adresimizi vereceğiz.)
+post setup (Trafik ve klasör bilgileri post için setlenecek. Örnek : 4 ve /home/cadomi/post)
+smesher status (Currently smeshing demesi OK.)
